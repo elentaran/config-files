@@ -1,0 +1,25 @@
+#
+# Example of a user's .screenrc file
+#
+
+# no annoying audible bell, please
+vbell off
+
+# don't display the copyright page
+startup_message off
+
+
+defscrollback 2048
+
+
+hardstatus alwayslastline "%{= bW} %-w%{= Wb}%n %t%{-}%+w %=%c"
+
+
+# navigate when split screen 
+bind j focus down 
+bind k focus up
+
+# navigate between screen
+bind h prev
+bind l next
+
