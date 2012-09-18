@@ -9,7 +9,7 @@ alias emacs='emacs -nw'
 alias weka='java -jar /home/arimmel/Tools/weka-3-7-4/weka.jar'
 
 alias ls='ls --color=auto'
-alias ll='ls -l'
+alias ll='ls -al'
 alias grep='grep --color=auto'
 alias less='less -X'
 
