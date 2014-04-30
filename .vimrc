@@ -54,16 +54,45 @@ set softtabstop=4              " number of spaces while editing
 set shiftwidth=4
 set expandtab
 
+" set cursor to last known position when opening a file
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+       \| exe "normal! g'\"" | endif
+endif
 
+" option for Vundle (bundle manager)
+" commands:
+"   BundleList (list configured packages)
+"   BundleInstall (install uninstalled packages from the list)
+"   BundleUpdate (check for updates and install them)
+"   BundleClean (remove unused packages)
+set nocompatible
+filetype off
+filetype plugin indent on
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" list of bundles
+Bundle 'gmarik/vundle'      
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'screen.vim'
+Bundle 'Vim-R-plugin'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 
 " option vim for vim-r-plugin
-set nocompatible
 syntax enable
-filetype plugin on
-filetype indent on
 " let vimrplugin_screenplugin = 0
 let vimrplugin_tmux = 0
 let maplocalleader = "!"
 
 
+" Octave syntax 
+augroup filetypedetect 
+    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+augroup END 
+
+" option for YouCompleteMe
+set completeopt-=preview
+let ycm_confirm_extra_conf = 0

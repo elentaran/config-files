@@ -12,6 +12,7 @@ alias ls='ls --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
 alias less='less -X'
+alias gdvim='google docs edit --editor vim --title'
 
 export EDITOR=vim
 
@@ -21,3 +22,6 @@ export EDITOR=vim
 #white background
 PS1="\[\e[0;31m\][\t] \[\e[0;32m\]\u@\h:\[\e[0;34m\]\w \[\e[1;30m\]\$ "
 
+
+PATH=/bin:$PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
