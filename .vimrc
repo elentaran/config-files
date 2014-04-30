@@ -60,6 +60,9 @@ if has("autocmd")
        \| exe "normal! g'\"" | endif
 endif
 
+" installing Vundle: git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" uncomment bundles
+" type :BundleInstall
 " option for Vundle (bundle manager)
 " commands:
 "   BundleList (list configured packages)
@@ -70,16 +73,18 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " list of bundles
 Bundle 'gmarik/vundle'      
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'screen.vim'
-Bundle 'Vim-R-plugin'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'screen.vim'
+"Bundle 'Vim-R-plugin'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+
+call vundle#end()
 
 " option vim for vim-r-plugin
 syntax enable
