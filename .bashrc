@@ -6,7 +6,7 @@
 alias kgs='javaws http://files.gokgs.com/javaBin/cgoban.jnlp'
 alias emacs='emacs -nw'
 # alias weka='java -Xmx2048m -classpath $CLASSPATH:/home/arimmel/Tools/weka-3-7-4/weka.jar weka.gui.GUIChooser'
-alias weka='java -jar /home/arimmel/Tools/weka-3-7-4/weka.jar'
+#alias weka='java -jar /home/arimmel/Tools/weka-3-7-4/weka.jar'
 
 alias ls='ls --color=auto'
 alias ll='ls -al'

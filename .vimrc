@@ -73,24 +73,24 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " list of bundles
 Bundle 'gmarik/vundle'      
-"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'"
 "Bundle 'screen.vim'
 "Bundle 'Vim-R-plugin'
 "Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+"Bundle 'airblade/vim-gitgutter'
 
 call vundle#end()
 
 " option vim for vim-r-plugin
-syntax enable
+" syntax enable
 " let vimrplugin_screenplugin = 0
-let vimrplugin_tmux = 0
-let maplocalleader = "!"
+" let vimrplugin_tmux = 0
+" let maplocalleader = "!"
 
 
 " Octave syntax 
