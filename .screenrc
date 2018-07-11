@@ -1,6 +1,3 @@
-#
-# Example of a user's .screenrc file
-#
 
 # no annoying audible bell, please
 vbell off
@@ -11,8 +8,10 @@ startup_message off
 
 defscrollback 2048
 
+# compute the disk usage
+backtick 1 60 60 bash -c "df -h . | sed -n '2p' | awk '{print \$5}'"
 
-hardstatus alwayslastline "%{= bW} %-w%{= Wb}%n %t%{-}%+w %=%c"
+hardstatus alwayslastline "%{= bW} %-w%{= Wb}%n %t%{-}%+w %=HD:%1` | %c"
 
 
 # navigate when split screen 
