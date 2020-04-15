@@ -1,0 +1,37 @@
+# set vi mode
+set editing-mode vi
+set keymap vi
+
+set show-mode-in-prompt on
+
+set vi-ins-mode-string \eP\e[5 q\e\\
+set vi-cmd-mode-string \eP\e[2 q\e\\
+
+set keyseq-timeout 100
+
+# Show all completions as soon as I press tab, even if there's more than one
+set show-all-if-ambiguous on
+# Ignore case
+set completion-ignore-case on
+# on menu-complete, first display the common prefix, then cycle through the 
+# options when hitting TAB
+set menu-complete-display-prefix on
+
+
+$if mode=vi
+# these are only in command mode
+set keymap vi-command
+"j": history-search-forward
+"k": history-search-backward
+
+# these are only in insert mode
+set keymap vi-insert
+"jk": "\e"
+"\C-l":clear-screen
+"\C-w":backward-kill-word
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+RETURN: "\e\n"
+$endif
+
+# to edit the command in a file, press v while in command mode
