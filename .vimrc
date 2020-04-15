@@ -2,6 +2,10 @@
 "	Config File VIM Arpad Rimmel	   "
 """"""""""""""""""""""""""""""""""""""""""""
 
+" syntax coloration
+filetype plugin on
+syntax on
+
 " Assign F keys to unable/disable the spellchecker
 map <F5> <ESC>:setlocal spell spelllang=en_us<RETURN>
 map <F6> <ESC>:setlocal spell spelllang=fr<RETURN>
@@ -60,6 +64,8 @@ if has("autocmd")
        \| exe "normal! g'\"" | endif
 endif
 
+
+
 " installing Vundle: git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " uncomment bundles
 " type :BundleInstall
@@ -69,35 +75,25 @@ endif
 "   BundleInstall (install uninstalled packages from the list)
 "   BundleUpdate (check for updates and install them)
 "   BundleClean (remove unused packages)
+
 set nocompatible
 filetype off
-filetype plugin indent on
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " list of bundles
-Bundle 'gmarik/vundle'      
+"Bundle 'gmarik/vundle'      
 "Bundle 'Valloric/YouCompleteMe'"
 "Bundle 'screen.vim'
-"Bundle 'Vim-R-plugin'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'airblade/vim-gitgutter'
 
-call vundle#end()
+"call vundle#end()
 
-" option vim for vim-r-plugin
-" syntax enable
-" let vimrplugin_screenplugin = 0
-" let vimrplugin_tmux = 0
-" let maplocalleader = "!"
+filetype plugin indent on
 
-
-" Octave syntax 
-augroup filetypedetect 
-    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
-augroup END 
 
 " option for YouCompleteMe
-set completeopt-=preview
-let ycm_confirm_extra_conf = 0
+"set completeopt-=preview
+"let ycm_confirm_extra_conf = 0
