@@ -1,17 +1,16 @@
 # .bashrc
 
-# adress server 192.168.33.40
-
 # User specific aliases and functions
-alias emacs='emacs -nw'
-# alias weka='java -Xmx2048m -classpath $CLASSPATH:/home/arimmel/Tools/weka-3-7-4/weka.jar weka.gui.GUIChooser'
-#alias weka='java -jar /home/arimmel/Tools/weka-3-7-4/weka.jar'
 
-alias ls='ls --color=auto'
-alias ll='ls -al'
+# for linux
+#alias ls='ls --color=auto'
+#alias ll='ls -l'
+# for macOS
+alias ls='ls -G'
+alias ll='ls -l'
+
 alias grep='grep --color=auto'
 alias less='less -X'
-alias gdvim='google docs edit --editor vim --title'
 
 alias python='python3'
 alias pip='pip3'
