@@ -2,6 +2,9 @@
 "	Config File VIM Arpad Rimmel	   "
 """"""""""""""""""""""""""""""""""""""""""""
 
+" show line and column on bottom right
+set ruler
+
 " syntax coloration
 filetype plugin on
 syntax on
@@ -79,17 +82,17 @@ endif
 set nocompatible
 filetype off
 
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " list of bundles
-"Bundle 'gmarik/vundle'      
+Bundle 'gmarik/vundle'      
 "Bundle 'Valloric/YouCompleteMe'"
 "Bundle 'screen.vim'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'airblade/vim-gitgutter'
 
-"call vundle#end()
+call vundle#end()
 
 filetype plugin indent on
 
