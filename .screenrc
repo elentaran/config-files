@@ -4,18 +4,43 @@ vbell off
 # don't display the copyright page
 startup_message off
 
+# when disconnected, will detach automaticly
+autodetach on
 
+# more historic
 defscrollback 2048
+
+# no junk left on screen when leaving vi
+altscreen on
+
+# a session name for easiest reattach
+sessionname default
+
+# necessary for window autorenaming magic. Set the first character to whatever your bash prompt ends in.
+shelltitle '$|bash'		
+
 
 
 hardstatus alwayslastline "%{= bW} %-w%{= Wb}%n %t%{-}%+w %=%c"
 
 
 # navigate when split screen 
-bind j focus down 
-bind k focus up
+bind j focus down
+bind k focus up 
 
-# navigate between screen
-bind h prev
-bind l next
+# resize regions
+bind = resize =
+bind + resize +3
+bind - resize -3
 
+bind K kill
+
+# remove dangerous binding
+bind ^k     # kill a window
+bind .      # termcap copy
+bind ^.      # termcap copy
+bind x     # lock screen
+bind ^x     # lock screen
+bind h     # do a hardcopy of the screen
+bind ^h     # lock screen
+bind W     # resize terminal

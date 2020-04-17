@@ -7,7 +7,7 @@
 #alias ll='ls -l'
 # for macOS
 alias ls='ls -G'
-alias ll='ls -l'
+alias ll='ls -la'
 
 alias grep='grep --color=auto'
 alias less='less -X'
@@ -27,3 +27,18 @@ PS1="\[\e[0;31m\][\t] \[\e[0;32m\]\u@\h:\[\e[0;34m\]\w \[\e[1;30m\]\$ "
 PATH=/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:.local/bin
+
+
+# used for autorename of screen windows
+case $TERM in
+        screen*)
+                # This is the escape sequence ESC k \w ESC \
+                #Use program name as titel
+                SCREENTITLEPROGRAM='\[\ek\e\\\]'
+                # only filled if there is a program running
+                ;;
+        *)
+                SCREENTITLEPROGRAM=''
+                ;;
+esac
+PS1="${SCREENTITLEPROGRAM}${PS1}"

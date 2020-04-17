@@ -2,6 +2,9 @@
 "	Config File VIM Arpad Rimmel	   "
 """"""""""""""""""""""""""""""""""""""""""""
 
+" don't try to be compatible with VI
+set nocompatible
+
 " show line and column on bottom right
 set ruler
 
@@ -19,9 +22,6 @@ map <C-T> <ESC>:tabedit<CR>
 map <C-L> <ESC>:tabnext<CR>
 map <C-H> <ESC>:tabprevious<CR>
 
-nmap ,v :edit $MYVIMRC<CR>
-nmap ,s :source $MYVIMRC<CR>
-
 
 " Assign keys for the navigation
 map <C-J> <C-D>
@@ -33,15 +33,17 @@ map S :w<CR>
 " Assign ESC on more accesible keys
 imap jk <ESC>
 imap kj <ESC>
-imap <C-X> <ESC>
 
 " case sensitive search only when there is a capital letter
 set ignorecase 
 set smartcase
-
+set magic                   " regexp when search
 " incremental search
 set incsearch
-set magic                   " regexp when search
+"highlight results
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " scroll 3 lines before reaching the end of the screen
 set scrolloff=3
@@ -51,7 +53,9 @@ nnoremap ' `
 nnoremap ` '
 
 " autocomplete in a more useful way
-set wildmode=longest,list
+" autocompletion on all open files
+set path+=**
+set wildmode=longest:list,full
 
 " Indentation
 set autoindent
@@ -79,22 +83,21 @@ endif
 "   BundleUpdate (check for updates and install them)
 "   BundleClean (remove unused packages)
 
-set nocompatible
-filetype off
+"filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " list of bundles
-Bundle 'gmarik/vundle'      
+"Bundle 'gmarik/vundle'      
 "Bundle 'Valloric/YouCompleteMe'"
 "Bundle 'screen.vim'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'airblade/vim-gitgutter'
 
-call vundle#end()
+"call vundle#end()
 
-filetype plugin indent on
+"filetype plugin indent on
 
 
 " option for YouCompleteMe
