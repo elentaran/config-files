@@ -1,0 +1,9 @@
+Host vmarpad
+    HostName vmarpad
+    ProxyJump rimmel_arp@wdi.supelec.fr
+    User rimmel_arp
+
+
+Host rebond
+    HostName wdi.supelec.fr
+    User rimmel_arp
