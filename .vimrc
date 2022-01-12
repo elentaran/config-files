@@ -2,6 +2,11 @@
 "	Config File VIM Arpad Rimmel	   "
 """"""""""""""""""""""""""""""""""""""""""""
 
+" in order to paste text "
+" :set paste "
+" paste the text "
+" :set nopaste " 
+
 " don't try to be compatible with VI
 set nocompatible
 

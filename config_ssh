@@ -7,3 +7,7 @@ Host vmarpad
 Host rebond
     HostName wdi.supelec.fr
     User rimmel_arp
+
+Host meso
+    HostName ruche.mesocentre.universite-paris-saclay.fr
+    User rimmela
